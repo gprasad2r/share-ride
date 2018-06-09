@@ -1,0 +1,31 @@
+<% include partials/header %>
+
+<div class="container" style="background-color:rgba(144, 158, 200, 0.2)">
+	<div class="row">
+		<div class="col-md-4">
+		<%= typeof msg != "undefined" ? msg:'' %>		
+			<form action="/home/profile" method="post" enctype="multipart/form-data">
+			    Select image to upload:
+			    <div class="form-group">
+			    <input type="file" name="fileimage" id="fileToUpload">
+			    </div>
+			    <div class="form-group">
+			    <input type="submit" class="btn btn-primary form-control" value="Upload Image" name="submit">
+			  <img src="<%=typeof imgsource !="undefined" ? imgsource : '' %>" class="img-fluid" >
+			    </div>
+			</form>
+		</div>
+		<div class="col-md-8">
+			<p> user profile page</p>
+			<% rides.forEach(function(ride){%>
+			<p><%= ride.username %></p>
+			<p><%= ride.startingpoint %> - <%= ride.endingpoint %></p>
+			<% var date =new Date(ride.ridedate) %>
+			<p> <%= date.toDateString() %></p>
+			<a class="btn btn-primary" href="/home/<%= ride._id %>">Moore..</a>
+			<a class="btn btn-primary" href="/home/profile/<%= ride._id %>">Delete</a>
+			<% }) %>
+		</div>
+	</div>
+</div>
+<% include partials/footer %>

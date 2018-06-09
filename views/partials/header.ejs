@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+share ride
+</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+	
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/home">
+				<p>Share-Ride</p>
+			</a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<% if(!currentUser) { %>
+			<li><a href="/home/registration">Sign-Up</a></li>
+			<li><a href="/home/login">Sign-In</a></li>
+<% } else { %>
+			<li><a href="/home/profile"><%= currentUser.name %></a></li>
+			<li><a href="/home/logout">logout</a></li>
+			<% } %>
+
+		</ul>
+	</div>
+</nav>

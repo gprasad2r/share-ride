@@ -1,0 +1,40 @@
+<% include partials/header %>
+
+<div class="container" style="border:2px solid red;width:50%;padding:0 auto">
+<h6><%= ride.username %></h6>
+<p><%= ride.startingpoint %> - <%= ride.endingpoint %></p>
+<% var date =new Date(ride.ridedate) %>
+<p> <%= date.toDateString() %></p>
+
+<div class="row">
+<div class="col-lg-3">
+<i class="fa fa-user" aria-hidden="true"><span class="border" style="padding:5px"><%= ride.availableseats %></span></i>
+</div>
+<div class="col-lg-3">
+<i class="fa fa-suitcase" aria-hidden="true"><span class="border-0" style="padding:5px" ><%= ride.luggagespace %></span></i>
+</div>
+<div class="col-lg-3">
+<i class="fa fa-bus" aria-hidden="true"><span class="border-0" style="padding:5px"><%= ride.doors %></span></i>
+</div>
+<div class="col-lg-3">
+<i class="fa fa-asterisk" aria-hidden="true"><span class="border-0" style="padding:5px"><%= ride.aircondition%></span></i>
+</div>
+<div class="btn row">
+<a href="/home/<%= ride._id %>/comments/new" class="btn btn-lg btn-primary" style="position:relative">comment</a>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-3"><h4>Comments: </h4>
+<% ride.comments.forEach(function(comment){ %>
+
+<p><%= comment.username %> - <%= comment.comment %></p>
+<% }) %>
+</div>
+</div>
+
+
+</div>
+
+
+
+<% include partials/footer %>

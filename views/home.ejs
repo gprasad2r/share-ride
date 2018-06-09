@@ -1,0 +1,66 @@
+<% include partials/header %>
+
+<div class="container ">
+<div class="row">
+
+<div class="col-md-8 col-sm-12">
+
+
+<% rides.forEach(function(ride){%>
+<p><%= ride.username %></p>
+<p><%= ride.startingpoint %> - <%= ride.endingpoint %></p>
+<% var date =new Date(ride.ridedate) %>
+<p> <%= date.toDateString() %></p>
+<a class="btn btn-primary" href="/home/<%= ride._id %>">Moore..</a>
+<% }) %>
+
+</div>
+
+<div class="col-md-4 col-sm-12">
+<h3>shareride website</h3>
+<form action="/home" method="post">
+<div class="form-group">
+<input class="form-control" type="text" name="startingpoint" placeholder="starting point" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="endingpoint" placeholder="ending point" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="date" name="ridedate" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="availableseats" placeholder="1 seat available" required>
+</div>
+<div class="form-group">
+<label>
+<input type="radio" name="prefference" value="male" required>male
+</label>
+<label>
+<input type="radio" name="prefference" value="female" required>female</label>
+<label>
+<input type="radio" name="prefference" value="both" required>both</label>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="carmodel" placeholder="car model" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="luggagespace" placeholder="1 bag" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="doors" placeholder="2 or 4 door" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="aircondition" placeholder="a/c or non-a/c" required>
+</div>
+<div class="form-group">
+<button class="btn btn-lg btn-primary" type="submit">Ride</button>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+
+<% include partials/footer %>
+
+
