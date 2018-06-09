@@ -50,6 +50,9 @@
     	next();
     });
 
+    app.get('/',function(req,res){
+        res.redirect("/home");
+    });
     // home page
     app.get("/home",function(req,res){
     	Ride.find({},function(err,allrides){
