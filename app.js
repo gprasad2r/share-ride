@@ -13,6 +13,7 @@
     var Ride =require("./models/ride");
     const Comment = require('./models/comment');
     const Prifle = require('./models/profile');
+    const port =process.env.PORT || 3000;
 
     mongoose.connect('mongodb://localhost/share_car');
 
@@ -263,6 +264,6 @@
     }
 
     //server to start 
-    app.listen(3000,function(){
+    app.listen(port,function(){
     	console.log("server has started...");
     });
