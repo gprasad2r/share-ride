@@ -15,7 +15,7 @@
     const Prifle = require('./models/profile');
     const port =process.env.PORT || 3000;
 
-    mongoose.connect('mongodb://gprasad2r@gmail.com:p-99850.14246P@ds119014.mlab.com:19014/node-db-proj');
+    mongoose.connect('mongodb://prasad:prasad2@ds119014.mlab.com:19014/node-db-proj');
 
     const storage = multer.diskStorage({
     	destination:'./public/upload',
