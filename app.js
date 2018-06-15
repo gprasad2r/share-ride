@@ -24,8 +24,8 @@
    
     const port =process.env.PORT || 3000;
 
-    mongoose.connect('mongodb://localhost/share_car'||'mongodb://prasad:prasad2@ds119014.mlab.com:19014/node-db-proj');
-
+    mongoose.connect('mongodb://prasad:prasad2@ds119014.mlab.com:19014/node-db-proj');
+// 'mongodb://localhost/share_car'||
     const storage = multer.diskStorage({
     	destination:'./public/upload',
     	filename:function(req,file,cb){
