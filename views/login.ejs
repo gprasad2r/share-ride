@@ -1,21 +1,24 @@
 
 <% include partials/header %>
-<div class="container">
-<h1>Login Page</h1>
+<div class="container-fluid">
+	<div class="row">
+		<div class=" loginbox col-md-6  ">
+				<h1>Login Page</h1>
+					<form action="/home/login" method="post">
+							<div class="form-group">
+							<input type="email" class="form-control" name="username" placeholder="enter email" autocomplete="off" required>
+							</div>
+							<div class="form-group">
+							<input type="password" class="form-control" name="password" placeholder="enter password" required>
+							</div>
+							<div class="form-group">
+							<button type="submit">Login</button>
+							</div>
+					</form>
+		</div>
+	</div>
+</div>
 
-<form action="/home/login" method="post">
-<div class="form-group">
-<input type="email" class="form-control" name="username" placeholder="enter email" required>
-</div>
-<div class="form-group">
-<input type="password" class="form-control" name="password" placeholder="enter password" required>
-</div>
-<div class="form-group">
-<button type="submit" class="btn btn-lg btn-primary">login</button>
-</div>
-
-</form>
-</div>
 
 <% include partials/footer %>
 

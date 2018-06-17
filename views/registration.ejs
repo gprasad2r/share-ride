@@ -1,28 +1,32 @@
 <% include partials/header %>
 
-<div class="container">
-<h1>Registration Page</h1>
-<form action="/home/registration" method="post">
-<div class="form-group">
-<input type="text" class="form-control" name="fullname" placeholder="enter name" required>
-</div>
-<div class="form-group">
-<input type="email" class="form-control" name="username" placeholder="enter email" required>
-</div>
-<div class="form-group">
-<input type="password" class="form-control" name="password" placeholder="enter password" required>
-</div>
-<div class="form-group">
-<label>
-<input type="radio" name="gender" value="male" required>male
-</label>
-<label>
-<input type="radio" name="gender" value="female" required>female</label>
-</div>
-<div class="form-group">
-<button type="submit" class="btn btn-lg btn-primary">submit</button>
-</div>
-</form>
+<div class="container-fluid">
+	<div class="row">
+		<div class="registration col-md-6 ">
+			<h1>Registration</h1>
+				<form action="/home/registration" method="post" autocomplete="off">
+					<div class="form-group">
+					<input type="text" class="form-control" name="fullname" placeholder="enter name" required>
+					</div>
+					<div class="form-group">
+					<input type="email" class="form-control" name="username" placeholder="enter email" required>
+					</div>
+					<div class="form-group">
+					<input type="password" class="form-control" name="password" placeholder="enter password" required>
+					</div>
+					<div class="form-group">
+					<label class="radio-inline">
+					<input type="radio"  name="gender" value="male" required><span>Male</span>
+					</label>
+					<label class="radio-inline">
+					<input type="radio"  name="gender" value="female" required><span>Female</span></label>
+					</div>
+					<div class="form-group">
+					<button type="submit" class="btn btn-lg ">submit</button>
+					</div>
+				</form>
+		</div>
+	</div>
 </div>
 <% include partials/footer %>
 

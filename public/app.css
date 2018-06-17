@@ -1,6 +1,9 @@
 body{
 	background-color:rgba(150, 187, 56, 0.2);
 }
+.navbar-header p{
+	color:#fff;
+}
 .navbar-brand{
 	margin:0 auto;
 	padding-left:70px ;
@@ -8,9 +11,191 @@ body{
 	font-size:25px;
 	font-family: sans-serif,Open san,Times, Times New Roman;
 }
+a{
+	color:green;
+}
 .nav{
 	margin: 0, auto;
 	padding-right: 70px;
 	font-size:20px;
 	font-family: sans-serif,Open san,Times, Times New Roman;
 }
+
+.loginbox {
+	width:320px;
+	height: 420px;
+	background:#000;
+	top:50%;
+	left:50%;
+	position: absolute;
+	transform: translate(-50%, -50%); 
+	padding:30px 30px;
+}
+
+.loginbox h1 {
+	margin:0;
+	padding:0 0 20px;
+	text-align:center;
+	color: #fff;
+	font-size: 35px;
+}
+
+
+.loginbox input{
+	width:100%;
+	margin-bottom: 20px;
+}
+
+.loginbox input[type="password"], input[type="email"]
+{
+	border:none;
+	border-bottom: 1px solid #fff;
+	background:  transparent;
+	outline: none;
+	height: 38px;
+	color:#fff;
+	font-size: 16px;
+}
+.loginbox button[type="submit"]
+{	
+	border:none;
+	width:260px;
+	outline:none;
+	height:40px;
+	background:#fb2525;
+	color:#fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 10px;
+}
+.loginbox button[type="submit"]:hover{
+	cursor: pointer;
+	background:#ffc107;
+	color:#000;
+}
+
+
+.registration {
+	width:320px;
+	height: 420px;
+	background:#000;
+	top:50%;
+	left:50%;
+	position: absolute;
+	transform: translate(-50%, -50%); 
+	padding:30px 30px;
+}
+.registration h1 {
+	margin:0;
+	padding:0 0 20px;
+	text-align:center;
+	color: #fff;
+	font-size: 35px;
+}
+
+
+.registration input{
+	width:100%;
+	margin-bottom: 20px;
+}
+
+.registration input[type="text"],input[type="password"], input[type="email"]
+{
+	border:none;
+	border-bottom: 1px solid #fff;
+	background:  transparent;
+	outline: none;
+	height: 38px;
+	color:#fff;
+	font-size: 16px;
+}
+.registration .radio-inline{
+	display:inline-block;
+	margin:0 auto;
+	padding-left :0px;
+	font-size: 15px;
+	color:#fff;
+	cursor: pointer;
+	}
+.registration span{
+	padding-left:40px;
+	cursor: pointer;
+}
+.registration button[type="submit"]
+{
+	border:none;
+	width:260px;
+	outline:none;
+	height:40px;
+	background:#fb2525;
+	color:#fff;
+	font-size: 18px;
+	border-radius: 20px;
+	text-align:center;
+}
+.registration button[type="submit"]:hover{
+	cursor: pointer;
+	background:#ffc107;
+	color:#000;
+}
+
+/*
+@media screen and (max-width: 1024px) {
+	.loginbox{
+		width: 80%;
+		height: 70%;
+	}
+	.loginbox button[type="submit"]
+	{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.loginbox {
+		width: 80%;
+		height: 100%;
+		transform: translate(-50%, 0%); 
+	}
+	.loginbox button[type="submit"]
+	{
+		width: 100%;
+	}
+}*/
+@media screen and (max-width: 320px) {
+	.loginbox,.registration {
+		width: 80%;
+		height: 70%;
+		position: relative;
+		transform: translate(-50%,-0%); 
+	}
+	.loginbox  button[type="submit"]
+	{
+		width: 100%;
+	}
+	.registration button[type="submit"]
+	{
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
