@@ -162,6 +162,38 @@ a{
 		width: 100%;
 	}
 }*/
+@media screen and (max-width: 425px) {
+	.loginbox,.registration {
+		width: 80%;
+		height: 70%;
+		position: relative;
+		transform: translate(-50%,-0%); 
+	}
+	.loginbox  button[type="submit"]
+	{
+		width: 100%;
+	}
+	.registration button[type="submit"]
+	{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 375px) {
+	.loginbox,.registration {
+		width: 80%;
+		height: 70%;
+		position: relative;
+		transform: translate(-50%,-0%); 
+	}
+	.loginbox  button[type="submit"]
+	{
+		width: 100%;
+	}
+	.registration button[type="submit"]
+	{
+		width: 100%;
+	}
+}
 @media screen and (max-width: 320px) {
 	.loginbox,.registration {
 		width: 80%;
