@@ -141,9 +141,9 @@ a{
 	color:#000;
 }
 
-/*
+
 @media screen and (max-width: 1024px) {
-	.loginbox{
+	.loginbox,.registration{
 		width: 80%;
 		height: 70%;
 	}
@@ -154,16 +154,16 @@ a{
 }
 
 @media screen and (max-width: 768px) {
-	.loginbox {
+	.loginbox ,.registration{
 		width: 80%;
-		height: 100%;
-		transform: translate(-50%, 0%); 
-	}
+		height:70%;
+		/*transform: translate(-50%,-100%); 
+	}*/}
 	.loginbox button[type="submit"]
 	{
 		width: 100%;
 	}
-}*/
+}
 @media screen and (max-width: 425px) {
 	.loginbox,.registration {
 		width: 80%;
