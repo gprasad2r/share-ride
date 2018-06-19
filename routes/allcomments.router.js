@@ -1,7 +1,9 @@
-const express= require('express');
-const router = express.Router();
-    var Ride =require("./../models/ride");
-    const Comment = require('./../models/comment');
+const express= require('express'),
+	 router = express.Router(),
+    	 Ride =require("./../models/ride"),
+	 Comment = require('./../models/comment'),
+	 isloggedin = require('./middleware/isloggedin');
+
     router.post("/home/:id/comments",isloggedin,function(req,res){
     	Ride.findById(req.params.id).exec(function(err,ride){
     		if(err){
@@ -35,14 +37,4 @@ const router = express.Router();
              });//finding Ride data statement
          }); //post api
 
-     // middleware
-  function isloggedin(req,res,next){
-    	if(req.isAuthenticated()){
-    		return next();
-    	}
-    	else{
-    		res.redirect("/home/login");
-    	}
-    }
-
-    module.exports = router;
+module.exports = router;

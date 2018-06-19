@@ -1,26 +1,24 @@
-     const express      = require("express");
-    const	app 		 = express();
-    var bodyParser   = require("body-parser");
-    var	mongoose 	 = require("mongoose");
-    var passport = require("passport");
-    var localStrategy =require("passport-local");
-    var session =require("express-session");
-    var expressValidator = require('express-validator');
-    var multer = require('multer');
-    var path = require('path');
-    var index = require('./routes/index.router');
-    var home = require('./routes/home.router');
-    var profile = require('./routes/profile.router');
-    var profileId = require('./routes/profile.id');
-    var registration = require('./routes/registration.route');
-    var login = require('./routes/login.router');
-    var logout = require('./routes/logout.router');
-    var singleRide = require('./routes/singleRide.router');
-    var newComment = require('./routes/newComment.router');
-    var allcomments = require('./routes/allcomments.router');
-    var User = require("./models/user");
-    var Ride =require("./models/ride");
-    const Comment = require('./models/comment');
+    const express      = require("express"),
+        	app 	   = express(),
+          bodyParser   = require("body-parser"),
+    	mongoose 	 = require("mongoose"),
+        passport = require("passport"),
+     localStrategy =require("passport-local"),
+     session =require("express-session"),
+     expressValidator = require('express-validator'),
+     multer = require('multer'),
+     path = require('path'),
+     index = require('./routes/index.router'),
+     home = require('./routes/home.router'),
+     profile = require('./routes/profile.router'),
+     profileId = require('./routes/profile.id'),
+     registration = require('./routes/registration.route'),
+     login = require('./routes/login.router'),
+     logout = require('./routes/logout.router'),
+     singleRide = require('./routes/singleRide.router'),
+     newComment = require('./routes/newComment.router'),
+     allcomments = require('./routes/allcomments.router'),
+     User = require("./models/user");
    
     const port =process.env.PORT || 3000;
 
@@ -59,8 +57,7 @@
     	next();
     });
 
-   
-       
+    //routers
     app.use('/', index);
     app.all('/home', home);
     app.all('/home/profile', profile);
@@ -72,14 +69,6 @@
     app.get('/home/:id/comments/new', newComment);
     app.post('/home/:id/comments', allcomments);
 
-  
-
-
-    // comments
-
-   
-  
-        
     // middleware
   function isloggedin(req,res,next){
     	if(req.isAuthenticated()){
